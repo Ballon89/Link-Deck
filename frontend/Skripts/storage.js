@@ -1,6 +1,6 @@
 import { createNewTile, clearTiles } from './ui.js';
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = '';
 const ACTIVE_WORKSPACE_KEY = 'linkDeckActiveWorkspace'; // Schlüssel für localStorage
 
 // --- Lokale Speicherung für den aktiven Workspace ---

@@ -1,5 +1,5 @@
 // Skripts/auth.js
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = '';
 
 // WICHTIG: 'credentials: "include"' sorgt dafür, dass Cookies (für die Session) mitgeschickt werden.
 export async function registerUser(username, password) {

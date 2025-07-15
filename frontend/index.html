@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkDeck</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div id="auth-container">
+        <h2>Willkommen bei LinkDeck</h2>
+        <div class="form-container">
+            <form id="register-form">
+                <h3>Registrieren</h3>
+                <input type="text" id="register-username" placeholder="Benutzername" required>
+                <input type="password" id="register-password" placeholder="Passwort" required>
+                <button type="submit">Registrieren</button>
+            </form>
+            <form id="login-form">
+                <h3>Login</h3>
+                <input type="text" id="login-username" placeholder="Benutzername" required>
+                <input type="password" id="login-password" placeholder="Passwort" required>
+                <button type="submit">Anmelden</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="app-container" class="hidden">
+        <header class="main-header">
+            <div class="logo">LinkDeck</div>
+            <nav class="main-nav">
+                <div class="workspace-controls">
+                    <select id="workspace-switcher"></select>
+                    <input type="text" id="new-workspace-input" placeholder="Neuer Workspace...">
+                    <button id="add-workspace-btn">+</button>
+                    <button id="delete-workspace-btn">🗑️</button>
+                </div>
+                <div class="user-controls">
+                    <span id="username-display"></span>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </nav>
+        </header>
+
+        <main id="tile-container">
+            <div id="add-tile-btn" class="tile add-tile-placeholder">
+                <span>+</span>
+            </div>
+        </main>
+    </div>
+
+    <div id="add-link-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-btn">&times;</span>
+            <h2 id="modal-headline">Neuen Link hinzufügen</h2>
+            <form id="add-link-form">
+                <label for="link-url">Link-URL:</label>
+                <input type="url" id="link-url" placeholder="https://beispiel.de" required>
+
+                <label for="link-title">Link-Titel:</label>
+                <input type="text" id="link-title" placeholder="Titel für die Kachel">
+
+                <button type="submit">Speichern</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script type="module" src="Skripts/main.js"></script>
+
+</body>
+</html>
